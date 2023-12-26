@@ -16,4 +16,5 @@ app.get("/gent",(req,res)=>{
 });
 app.listen(port,()=>{
     console.log("Running on 2000..");
+    console.log("hi");
 });
