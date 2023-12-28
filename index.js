@@ -4,7 +4,7 @@ import {dirname} from "path";
 import { fileURLToPath } from "url";
 const _dirname=dirname(fileURLToPath(import.meta.url));
 const app=express();
-const port=2000
+const port=process.env.PORT || 2000;
 app.use(express.static(_dirname+"\\public"));
 const j=["BullyBoys","CockSuckers","Manderin","Just_a_Friendly_Neighbourhood_Band"];
 app.get("/",(req,res)=>{
@@ -15,5 +15,5 @@ app.get("/gent",(req,res)=>{
     res.render(_dirname+"\\views\\index.ejs",{name:j[a]});
 });
 app.listen(port,()=>{
-    console.log("Running on 2000..");
+    console.log("Running..");
 });
